@@ -1,0 +1,40 @@
+{% if organizer.header.teaser %}
+  {% capture teaser %}{{ organizer.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if organizer.id %}
+  {% assign title = organizer.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign mail = organizer.mail | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign image = organizer.image | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = organizer.title %}
+  {% assign mail = organizer.mail %}
+  {% assign image = organizer.image %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | absolute_url }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+    <h3 class="archive__item-title" itemprop="headline">
+      {% if organizer.url %}
+        <a href="{{ organizer.url | absolute_url }}" rel="permalink">{{ organizer.title }}</a>
+       {% endif %}
+    </h3>
+    {% if organizer.image %}
+    <img src="{{ organizer.image | absolute_url }}" width="256"/><br />
+    {% endif %}
+    {% if organizer.mail %}<a class="archive__item-excerpt" itemprop="description" href="mailto:{{ organizer.mail }}">{{ organizer.mail | markdownify | strip_html | truncate: 160 }}</a>{% endif %}
+  </article>
+</div>

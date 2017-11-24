@@ -1,0 +1,10 @@
+---
+layout: single
+---
+
+{% if page.image %}
+<img src="{{ page.image | absolute_url }}" />
+{% endif %}
+<p>{{ page.category }}</p>
+
+{{ content }}

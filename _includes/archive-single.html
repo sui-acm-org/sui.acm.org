@@ -1,0 +1,60 @@
+{% if organizer.header.teaser %}
+  {% capture teaser %}{{ organizer.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if organizer.id %}
+  {% assign title = archive.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign website = archive.website | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign proceedings = archive.proceedings | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign image = archive.image | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = archive.title %}
+  {% assign website = archive.website | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign proceedings = archive.proceedings | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign image = archive.image %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | absolute_url }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+    <h3 class="archive__item-title" itemprop="headline">
+      {% if archive.website %}
+      <a href="{{ archive.website }}">
+      {% endif %}
+      {{ archive.title }}
+      {% if archive.website %}
+      </a>
+      {% endif %}
+    </h3>
+    {% if archive.image %}
+      {% if archive.website %}
+      <a href="{{ archive.website }}">
+      {% endif %}
+      <img src="{{ archive.image | absolute_url }}" width="256"/><br />
+      {% if archive.website %}
+      </a>
+      {% endif %}
+    {% endif %}
+    {% if archive.content %}
+      {{ archive.content }}
+    {% endif %}
+    {% if archive.website %}
+      <a href="{{ archive.website }}">Website</a><br />
+    {% endif %}
+    {% if archive.proceedings %}
+      <a href="{{ archive.proceedings }}">Proceedings</a>
+    {% endif %}
+  </article>
+</div>
