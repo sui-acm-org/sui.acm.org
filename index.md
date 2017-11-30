@@ -1,15 +1,15 @@
 ---
 layout: single
 header:
-  overlay_image: /assets/img/pixabay/brandenburger-tor-201939_1920.jpg
-  caption: "photo: [pixabay](https://pixabay.com/en/brandenburger-tor-dusk-dawn-201939/)"
+  overlay_image: /assets/img/pixabay/brandenburg-gate-275437_1920_crop.jpeg
+  caption: "photo: [pixabay](https://pixabay.com/)"
 title: 6th ACM Symposium on Spatial User Interaction
-excerpt: October 13–14, 2017<br />Berlin, Germany
+excerpt: October 13–14, 2018<br />Berlin, Germany
 sidebar:
   - title: "Important dates:"
     text: "
 	<p>Submission: TBA</p>
-	<p>Symposium: October 13–14</p>"
+	<p>Symposium: October 13–14, 2018</p>"
 ---
 
 The 6th ACM Symposium on Spatial User Interaction (SUI 2018) will take place from October 13 to 14 in Berlin, Germany.
