@@ -4,14 +4,13 @@ title: "Organization"
 permalink: /organization/
 author_profile: false
 ---
-Most chairs and all the committees are TBA.
 
-{% assign groups = site.organization | group_by: "category" | sort: "title" %}
+{% assign groups = site.organization | group_by: "category" %}
 {% for group in groups %}
-<h2>{{ group.name }}s</h2>
+<h2 class="archive__subtitle">{{ group.name }}s</h2>
 <div class="grid__wrapper">
 {% for organizer in group.items %}
-  {% include organization-single.html %}
+  {% include organization-single.html type="grid" %}
 {% endfor %}
 </div>
 {% endfor %}

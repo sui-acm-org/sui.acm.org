@@ -1,7 +1,6 @@
 ---
 category: Web Chair
 title: Tom Vierjahn
-mail: vierjahn@vr.rwth-aachen.de
 image: /assets/img/organization/tom_vierjahn.jpg
 layout: organizer
 ---
