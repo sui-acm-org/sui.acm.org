@@ -27,13 +27,19 @@
           alt="">
       </div>
     {% endif %}
-    <h3 class="archive__item-title" itemprop="headline">
+    <p class="archive__item-title" itemprop="headline">
       {% if organizer.url %}
         <a href="{{ organizer.url | absolute_url }}" rel="permalink">{{ organizer.title }}</a>
        {% endif %}
-    </h3>
+    </p>
     {% if organizer.image %}
-    <img src="{{ organizer.image | absolute_url }}" width="256"/><br />
+    {% if organizer.url %}
+        <a href="{{ organizer.url | absolute_url }}" rel="permalink">
+    {% endif %}
+    <img src="{{ organizer.image | absolute_url }}" width="200"/><br />
+    {% if organizer.url %}
+        </a>
+    {% endif %}
     {% endif %}
     {% if organizer.mail %}<a class="archive__item-excerpt" itemprop="description" href="mailto:{{ organizer.mail }}">{{ organizer.mail | markdownify | strip_html | truncate: 160 }}</a>{% endif %}
   </article>
