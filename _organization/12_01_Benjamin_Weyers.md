@@ -1,7 +1,7 @@
 ---
 category: Student Volunteer Chair
 title: Benjamin Weyers
-image: /assets/img/pixabay/avatar-2025541_male.png
+image: /assets/img/organization/benjamin_weyers.jpg
 layout: organizer
 ---
 
