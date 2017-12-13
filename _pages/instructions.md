@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Instructions for editing the website
+permalink: /instructions/
 ---
 
 <style type="text/css">
