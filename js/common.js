@@ -1,12 +1,21 @@
 var repoPath = "https://github.com/sui-acm-org/sui.acm.org/";
 
+String.prototype.insertAt=function(index, string) { 
+  return this.substr(0, index) + string + this.substr(index);
+}
+
 function getThisPath()
 {
     var path = window.location.pathname;
     if (path === "/")
         path = "/index";
     if (path.slice(-1) == "/")
-	path = path.slice(0, -1);
+    	path = path.slice(0, -1);
+    if (path.split("/").length == 2)
+	path = "/_pages" + path
+    if (path.startsWith("/organization/"))
+	path.insertAt(1, "_")
+    document.write(path + "<br/>")
     return path;
 }
 
