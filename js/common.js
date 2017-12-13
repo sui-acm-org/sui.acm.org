@@ -14,7 +14,7 @@ function getThisPath()
     if (path.split("/").length == 2)
 	path = "/_pages" + path
     if (path.startsWith("/organization/"))
-	path.insertAt(1, "_")
+	path = path.insertAt(1, "_")
     return path;
 }
 
