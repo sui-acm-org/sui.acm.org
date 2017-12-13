@@ -7,6 +7,8 @@ String.prototype.insertAt=function(index, string) {
 function getThisPath()
 {
     var path = window.location.pathname;
+    if (path.startsWith("/2018"))
+	path = path.substring(5)
     if (path === "/")
         path = "/index";
     if (path.slice(-1) == "/")
