@@ -15,7 +15,6 @@ function getThisPath()
 	path = "/_pages" + path
     if (path.startsWith("/organization/"))
 	path.insertAt(1, "_")
-    document.write(path + "<br/>")
     return path;
 }
 
