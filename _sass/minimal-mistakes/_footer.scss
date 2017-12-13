@@ -54,6 +54,14 @@
   font-size: $type-size-7;
 }
 
+.page__footer-edit {
+  font-family: $global-font-family;
+  font-size: $type-size-7;
+  a:link {
+      text-decoration: underline;
+  }
+}
+
 .page__footer-follow {
 
   ul {
