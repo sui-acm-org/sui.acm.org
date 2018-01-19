@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Instructions for editing the website
+permalink: /instructions/
 ---
 
 <style type="text/css">
@@ -32,7 +33,7 @@ The *best* way to suggest a change is to go on the bottom of the page you want t
 
 After you’re done making the edits, you’ll go to the bottom of the page to commit your changes  *to a new branch*.
 
-After you click on "Propose file change", you’ll be taken to a page to describe your pull request. After clicking "Create Pull Request", <span style=todo">web@</span> gets both a bug report and a proposed change.
+After you click on "Propose file change", you’ll be taken to a page to describe your pull request. After clicking "Create Pull Request", <span style="todo">web@</span> gets both a bug report and a proposed change.
 
 If the change is simple, we’ll simply say "OK". If the change requires reviewers, we can ask for people to comment on the thread. After everyone says OK, we merge the change and then we will be able to push it to the website.
 

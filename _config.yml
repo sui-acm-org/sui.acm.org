@@ -24,6 +24,10 @@ collections:
 plugins:
   - jekyll-feed
 
+head_scripts:
+  - /js/d3.v4.min.js
+  - /js/common.js
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
