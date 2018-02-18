@@ -1,0 +1,16 @@
+#password for textphrase
+AuthType Basic
+AuthName "test page"
+AuthUserFile /home/suihostingacm/public_html/2018/test-page/.htpasswd
+Require valid-user
+
+#turn on url rewriting 
+RewriteEngine on
+
+#remove the need for .php extention 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php
+
+#forwarding
+RedirectMatch 301 authors/papers /papers
