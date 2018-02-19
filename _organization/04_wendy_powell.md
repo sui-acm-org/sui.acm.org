@@ -1,7 +1,7 @@
 ---
 category: Poster / Demo Chair
 title: Wendy Powell
-image: /assets/img/pixabay/avatar-2025541_female.png
+image: /assets/img/organization/wendy_powell.jpg
 layout: organizer
 ---
 
