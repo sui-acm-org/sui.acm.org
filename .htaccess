@@ -7,4 +7,4 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
 
 #forwarding
-RedirectMatch 301 authors/papers /papers
+RedirectMatch 301 /2018/authors/papers /2018/papers
