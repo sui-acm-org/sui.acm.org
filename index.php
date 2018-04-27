@@ -25,7 +25,7 @@
                     
                     <!-- Content -->
 				    <?php
-                    include("content/".basename(__FILE__, ".php").".html");
+                    include("content/".basename(__FILE__, ".php").".php");
                     ?>
 
 				</div>

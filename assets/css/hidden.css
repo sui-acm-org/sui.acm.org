@@ -1,0 +1,15 @@
+.visible {
+    display: inline;
+}
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 980px) {
+    .visible_medium {
+	display: inline;
+    }
+    .hidden_medium {
+	display: none;
+    }
+}
