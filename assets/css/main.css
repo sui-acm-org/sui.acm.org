@@ -4251,3 +4251,43 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
+
+		.accordion-wrapper {
+			position: relative;
+			padding: 5px 0;
+			border-bottom: 1px solid #e2e2e2;
+		}
+
+		.accordion-title {
+			font-weight: bold;
+			cursor: pointer;
+			font-family: "Roboto Slab", serif;
+			color: rgb(61, 68, 73);
+			transition: color 0.3s ease-in;
+		}
+		.accordion-title:hover {
+			color: #f56a6a;
+		}
+		.accordion-extra {
+			font-family: "Roboto Slab", serif;
+			color: rgb(61, 68, 73);
+			transition: color 0.3s ease-in;
+		}
+		.accordion-body{
+			display: none;
+		}
+		.accordion-wrapper.toggled .accordion-body {
+			display: block !important;
+		}
+		.accordion-wrapper.toggled::after {
+			content: "▲";
+			position: absolute;
+			right: 5px;
+			top: 0;
+		}
+		.accordion-wrapper::after {
+			content: "▼";
+			position: absolute;
+			right: 5px;
+			top: 0;
+		}

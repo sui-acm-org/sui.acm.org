@@ -282,4 +282,8 @@
 
 	});
 
+	$('.accordion-title').click(function(){
+		$(this).parent().toggleClass('toggled');
+	})
+
 })(jQuery);
